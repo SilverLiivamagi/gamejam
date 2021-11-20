@@ -1,0 +1,74 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
+
+.cloud {
+    --cloud-top: -1000;
+    --cloud-size: 60px;
+    position: absolute;
+    background-image: url("assets/cloud.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--cloud-size);
+    height: var(--cloud-size);
+    left: var(--cloud-size);
+    top: calc(var(--cloud-top) * 1px);
+    border-radius: 50%;
+}
+
+.enemy {
+    --enemy-top: 100;
+    --enemy-left: 900;
+    --enemy-size: 60px;
+    position: absolute;
+    background-image: url("assets/enemy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--enemy-size);
+    height: var(--enemy-size);
+    top: calc(var(--enemy-top) * 1px);
+    left: calc(var(--enemy-left) * 1px);
+/*    left: calc(var(--enemy-left) * 1px);
+    top: calc(var(--enemy-top) * 1px);*/
+}
+
+.coin {
+    --coin-top: 100;
+    --coin-left: 0;
+    --coin-size: 60px;
+    position: absolute;
+    background-image: url("assets/coin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--coin-size);
+    height: var(--coin-size);
+    left: calc(var(--coin-left) * 1px);
+    top: calc(var(--coin-top) * 1px);
+    border-radius: 50%;
+}
